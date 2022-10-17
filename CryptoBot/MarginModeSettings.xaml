@@ -1,0 +1,44 @@
+﻿<Window x:Class="CryptoBot.MarginModeSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CryptoBot"
+        mc:Ignorable="d"
+        Title="Settings of Margin Type" Height="450" Width="800">
+    <Window.DataContext>
+        <local:ViewModelMM/>
+    </Window.DataContext>
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0">
+            <Button Height="20" Width="100" Content="Fill" Command="{Binding buttonFill}" />
+            <Button Height="20" Width="100" Content="Select all" Command="{Binding buttonSelectAll}"/>
+            <Label Height="30" Content="Margin Type"/>
+            <ComboBox Height="20" Width="100" x:Name="cbMarginType" Text="{Binding formMarginType}"/>
+            <TextBox Height="20" Width="20" x:Name="tbLeverage" Text="{Binding formLeverage}"/>
+            <Label Height="30" Content="X" />
+            <Button Height="20" Width="100" Content="Change" Command="{Binding buttonChange}"/>
+        </WrapPanel>
+        
+        <ListView Grid.Row="1" ItemsSource="{Binding symbLeverage}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Select">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox Margin="5, 0" IsChecked="{Binding isSelect}" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Symbols" DisplayMemberBinding="{Binding symbol}" Width="120"/>
+                    <GridViewColumn Header="Margin Mode" DisplayMemberBinding="{Binding marMode}" Width="100"/>
+                    <GridViewColumn Header="Leverage" DisplayMemberBinding="{Binding Leverage}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

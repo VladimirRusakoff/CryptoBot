@@ -1,0 +1,16 @@
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\bin\Release\ChangeLeverage.exe.config
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\bin\Release\ChangeLeverage.exe
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\bin\Release\ChangeLeverage.pdb
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage.csprojAssemblyReference.cache
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\MainWindow.g.cs
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\App.g.cs
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\GeneratedInternalTypeHelper.g.cs
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage_MarkupCompile.cache
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage_MarkupCompile.lref
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\MainWindow.baml
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage.g.resources
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage.Properties.Resources.resources
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage.csproj.GenerateResource.cache
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage.csproj.CoreCompileInputs.cache
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage.exe
+D:\rvm\Crypto\CryptoBot_07012020\CryptoBot\ChangeLeverage\obj\Release\ChangeLeverage.pdb

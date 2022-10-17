@@ -1,0 +1,89 @@
+﻿<Window x:Class="CryptoBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CryptoBot"
+        mc:Ignorable="d"
+        Title="CRYPTO BOT" Height="770" Width="820">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="152*"/>
+            <ColumnDefinition Width="371*"/>
+        </Grid.ColumnDefinitions>
+        <Border MinWidth="400" Margin="15,1,15,0" Background="Gray" VerticalAlignment="Top" Padding="30" CornerRadius="20" Grid.ColumnSpan="2">
+            <!--<Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>-->
+            <StackPanel>
+                <Label HorizontalAlignment="Right" Content="" x:Name="lbLicense" FontSize="14" FontWeight="Bold"/>
+                <Grid Margin="0 0 0 20">
+                    <TextBlock HorizontalAlignment="Left" Text="BINANCE FUTURES" FontSize="20" FontWeight="Bold" />
+                    <Label HorizontalAlignment="Center" Content="Nickname" FontSize="15"/>
+                    <TextBox HorizontalAlignment="Right" FontSize="15" Width="310" Background="#FFADABAB" FontWeight="Bold" x:Name="tbNickname"/>
+                </Grid>
+                <Grid Margin="0 0 0 10">
+                    <Label HorizontalAlignment="Left" Content="API Key"/>
+                    <TextBox HorizontalAlignment="Right" Width="600" x:Name="tbAPIKey"/>
+                </Grid>
+                <Grid>
+                    <Label HorizontalAlignment="Left" Content="Secret Key" />
+                    <PasswordBox HorizontalAlignment="Right" Width="600" x:Name="pbSecKey"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Border MinWidth="400" Margin="15,0,15,15" Background="Gray" VerticalAlignment="Center"  Padding="10" CornerRadius="20" Grid.ColumnSpan="2">
+            <StackPanel>
+                <!--<ListView>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Symbols" Width="200"/>
+                            <GridViewColumn Header="Direction" Width="100"/>
+                            <GridViewColumn Header="Volume" Width="80"/>
+                            <GridViewColumn Header="Distance" Width="80"/>
+                            <GridViewColumn Header="Buffer" Width="80"/>
+                            <GridViewColumn Header="Stop" Width="80"/>
+                            <GridViewColumn Header="Take" Width="80"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>-->
+                <WrapPanel>
+                    <Button x:Name="buttonAdd" Content="Add" Click="Add_Click"/>
+                    <Button x:Name="buttonDelete" Content="Delete" Click="Delete_Click"/>
+                </WrapPanel>
+                <WindowsFormsHost x:Name="HostTemp" Height="190" VerticalAlignment="Top"/>
+                <Grid>
+                    <WrapPanel>
+                        <CheckBox x:Name="cbUseBTCdelta" Content="Use BTCUSDT Delta | " VerticalAlignment="Center" />
+                        <Label Content="BTC Minutes: "/>
+                        <TextBox x:Name="tbBTCminutes" Width="40"/>
+                        <Label Content="BTC Delta: "/>
+                        <TextBox x:Name="tbBTCdelta" Width="40"/>
+                        <Label Content="Seconds for waiting for: "/>
+                        <TextBox x:Name="tbBTCsecondsOff" Width="40"/>
+                    </WrapPanel>
+                </Grid>
+                <Grid Margin="0 5 0 0">
+                    <Button HorizontalAlignment="Left" Content="TEST" Click="Button_Click" Visibility="Hidden"/>
+                    <Button HorizontalAlignment="Center" FontSize="16" Content="Start strategy" x:Name="Start" Click="Start_Click" Height="25" Margin="328,0,327.8,-0.4" VerticalAlignment="Top"/>
+                    <CheckBox HorizontalAlignment="Right" VerticalAlignment="Center" Content="Log" x:Name="cbLogIsOn"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+        <Border Margin="15 0 15 15" Background="Gray" VerticalAlignment="Bottom" Padding="10" CornerRadius="20" Grid.ColumnSpan="2">
+            <TabControl x:Name="tcBalances" Height="180">
+                <TabItem x:Name="Settings">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse Height="10" Width="10" Fill="Black"/>
+                            <TextBlock Margin="3">Settings</TextBlock>
+                        </StackPanel>
+                    </TabItem.Header>
+                    <TabItem.Content>
+                        <Button Height="30" Width="100" HorizontalAlignment="Left" Content="Margin Mode" x:Name="MarginMode_Click" Click="MarginMode_Click_1"/>
+                    </TabItem.Content>
+                </TabItem>
+            </TabControl>
+        </Border>
+    </Grid>
+</Window>
